@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Thesis\ByteBuffer;
 
-use Amp\Cancellation;
 use Thesis\ByteReader\Reader;
-use Thesis\ByteReader\ReaderIsClosed;
+use Thesis\ByteReader\UnexpectedEof;
 
 /**
  * @api
@@ -27,22 +26,18 @@ final class BufferedReader implements Reader
         private readonly int $bufferSize = self::DEFAULT_BUFFER_SIZE,
     ) {}
 
-    /**
-     * @param positive-int $limit
-     * @return non-empty-string
-     * @throws ReaderIsClosed
-     * @throws InsufficientBuffer
-     */
-    public function read(int $limit, ?Cancellation $cancellation = null): string
+    public function read(int $limit): string
     {
         $size = max($limit, $this->bufferSize);
 
         for ($tries = 0; $tries < self::MAX_READS && $limit > \strlen($this->buffer); ++$tries) {
-            $this->buffer .= $this->reader->read($size, $cancellation);
+            $this->buffer .= $this->reader->read($size);
         }
 
         if ($limit > \strlen($this->buffer)) {
-            throw InsufficientBuffer::expects($limit, \strlen($this->buffer));
+            throw new UnexpectedEof(
+                \sprintf('There is not enough data in a buffer of size "%d" to read bytes of size "%d".', \strlen($this->buffer), $limit),
+            );
         }
 
         /** @psalm-var non-empty-string $bytes */

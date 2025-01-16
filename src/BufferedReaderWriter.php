@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Thesis\ByteBuffer;
 
-use Amp\Cancellation;
 use Thesis\ByteReader\Reader;
-use Thesis\ByteWriter\Flushable;
 use Thesis\ByteWriter\Writer;
 
 /**
@@ -39,9 +37,9 @@ final class BufferedReaderWriter implements
         $this->writer->write($bytes);
     }
 
-    public function read(int $limit, ?Cancellation $cancellation = null): string
+    public function read(int $limit): string
     {
-        return $this->reader->read($limit, $cancellation);
+        return $this->reader->read($limit);
     }
 
     public function flush(): void

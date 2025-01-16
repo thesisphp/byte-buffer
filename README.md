@@ -1,9 +1,9 @@
-# ByteBuffer
+# Byte Buffer
 
 ## Installation
 
 ```shell
-composer require thesis/bytebuffer
+composer require thesis/byte-buffer
 ```
 
 ## Basic usage

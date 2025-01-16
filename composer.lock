@@ -4,177 +4,23 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "883dfa75ef5bdef0dd0d55ef5c4cb50f",
+    "content-hash": "0b802406557942bbabc81b3c14d61c26",
     "packages": [
         {
-            "name": "amphp/amp",
-            "version": "v3.0.2",
+            "name": "thesis/byte-reader",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/amphp/amp.git",
-                "reference": "138801fb68cfc9c329da8a7b39d01ce7291ee4b0"
+                "url": "https://github.com/thesisphp/byte-reader.git",
+                "reference": "95bf6b52017726a98d348919f60795d656690ee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/amp/zipball/138801fb68cfc9c329da8a7b39d01ce7291ee4b0",
-                "reference": "138801fb68cfc9c329da8a7b39d01ce7291ee4b0",
+                "url": "https://api.github.com/repos/thesisphp/byte-reader/zipball/95bf6b52017726a98d348919f60795d656690ee9",
+                "reference": "95bf6b52017726a98d348919f60795d656690ee9",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
-                "revolt/event-loop": "^1 || ^0.2"
-            },
-            "require-dev": {
-                "amphp/php-cs-fixer-config": "^2",
-                "phpunit/phpunit": "^9",
-                "psalm/phar": "5.23.1"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/functions.php",
-                    "src/Future/functions.php",
-                    "src/Internal/functions.php"
-                ],
-                "psr-4": {
-                    "Amp\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Piotrowski",
-                    "email": "aaron@trowski.com"
-                },
-                {
-                    "name": "Bob Weinand",
-                    "email": "bobwei9@hotmail.com"
-                },
-                {
-                    "name": "Niklas Keller",
-                    "email": "me@kelunik.com"
-                },
-                {
-                    "name": "Daniel Lowrey",
-                    "email": "rdlowrey@php.net"
-                }
-            ],
-            "description": "A non-blocking concurrency framework for PHP applications.",
-            "homepage": "https://amphp.org/amp",
-            "keywords": [
-                "async",
-                "asynchronous",
-                "awaitable",
-                "concurrency",
-                "event",
-                "event-loop",
-                "future",
-                "non-blocking",
-                "promise"
-            ],
-            "support": {
-                "issues": "https://github.com/amphp/amp/issues",
-                "source": "https://github.com/amphp/amp/tree/v3.0.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/amphp",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-05-10T21:37:46+00:00"
-        },
-        {
-            "name": "revolt/event-loop",
-            "version": "v1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/revoltphp/event-loop.git",
-                "reference": "25de49af7223ba039f64da4ae9a28ec2d10d0254"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/25de49af7223ba039f64da4ae9a28ec2d10d0254",
-                "reference": "25de49af7223ba039f64da4ae9a28ec2d10d0254",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1"
-            },
-            "require-dev": {
-                "ext-json": "*",
-                "jetbrains/phpstorm-stubs": "^2019.3",
-                "phpunit/phpunit": "^9",
-                "psalm/phar": "^5.15"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Revolt\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Piotrowski",
-                    "email": "aaron@trowski.com"
-                },
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "ceesjank@gmail.com"
-                },
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering"
-                },
-                {
-                    "name": "Niklas Keller",
-                    "email": "me@kelunik.com"
-                }
-            ],
-            "description": "Rock-solid event loop for concurrent PHP applications.",
-            "keywords": [
-                "async",
-                "asynchronous",
-                "concurrency",
-                "event",
-                "event-loop",
-                "non-blocking",
-                "scheduler"
-            ],
-            "support": {
-                "issues": "https://github.com/revoltphp/event-loop/issues",
-                "source": "https://github.com/revoltphp/event-loop/tree/v1.0.6"
-            },
-            "time": "2023-11-30T05:34:44+00:00"
-        },
-        {
-            "name": "thesis/bytereader",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thesisphp/bytereader.git",
-                "reference": "4cffd739c61ba5a6b320d874f539fcbbda5a777c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thesisphp/bytereader/zipball/4cffd739c61ba5a6b320d874f539fcbbda5a777c",
-                "reference": "4cffd739c61ba5a6b320d874f539fcbbda5a777c",
-                "shasum": ""
-            },
-            "require": {
-                "amphp/amp": "^3.0",
                 "php": "^8.3"
             },
             "require-dev": {
@@ -214,8 +60,8 @@
             ],
             "description": "Reader abstraction for I/O.",
             "support": {
-                "issues": "https://github.com/thesisphp/bytereader/issues",
-                "source": "https://github.com/thesisphp/bytereader/tree/0.1.0"
+                "issues": "https://github.com/thesisphp/byte-reader/issues",
+                "source": "https://github.com/thesisphp/byte-reader/tree/0.3.1"
             },
             "funding": [
                 {
@@ -223,20 +69,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-01-16T06:26:06+00:00"
+            "time": "2025-01-16T15:56:41+00:00"
         },
         {
-            "name": "thesis/bytewriter",
-            "version": "0.1.0",
+            "name": "thesis/byte-writer",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thesisphp/bytewriter.git",
-                "reference": "d17c7714cf7c5a45a2a3931c819d8e02d2c0f59a"
+                "url": "https://github.com/thesisphp/byte-writer.git",
+                "reference": "bebd8f9fb15edc1c1b4c064a47c7d00674d16440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thesisphp/bytewriter/zipball/d17c7714cf7c5a45a2a3931c819d8e02d2c0f59a",
-                "reference": "d17c7714cf7c5a45a2a3931c819d8e02d2c0f59a",
+                "url": "https://api.github.com/repos/thesisphp/byte-writer/zipball/bebd8f9fb15edc1c1b4c064a47c7d00674d16440",
+                "reference": "bebd8f9fb15edc1c1b4c064a47c7d00674d16440",
                 "shasum": ""
             },
             "require": {
@@ -279,8 +125,8 @@
             ],
             "description": "Writer abstraction for I/O.",
             "support": {
-                "issues": "https://github.com/thesisphp/bytewriter/issues",
-                "source": "https://github.com/thesisphp/bytewriter/tree/0.1.0"
+                "issues": "https://github.com/thesisphp/byte-writer/issues",
+                "source": "https://github.com/thesisphp/byte-writer/tree/0.2.1"
             },
             "funding": [
                 {
@@ -288,7 +134,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-01-16T06:28:40+00:00"
+            "time": "2025-01-16T15:59:31+00:00"
         }
     ],
     "packages-dev": [
@@ -1671,16 +1517,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.40",
+            "version": "10.5.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "e6ddda95af52f69c1e0c7b4f977cccb58048798c"
+                "reference": "e76586fa3d49714f230221734b44892e384109d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e6ddda95af52f69c1e0c7b4f977cccb58048798c",
-                "reference": "e6ddda95af52f69c1e0c7b4f977cccb58048798c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e76586fa3d49714f230221734b44892e384109d7",
+                "reference": "e76586fa3d49714f230221734b44892e384109d7",
                 "shasum": ""
             },
             "require": {
@@ -1752,7 +1598,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.40"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.41"
             },
             "funding": [
                 {
@@ -1768,7 +1614,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-21T05:49:06+00:00"
+            "time": "2025-01-13T09:33:05+00:00"
         },
         {
             "name": "sebastian/cli-parser",

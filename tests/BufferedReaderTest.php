@@ -7,6 +7,7 @@ namespace Thesis\ByteBuffer;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Thesis\ByteReader\Reader;
+use Thesis\ByteReader\UnexpectedEof;
 
 #[CoversClass(BufferedReader::class)]
 final class BufferedReaderTest extends TestCase
@@ -53,7 +54,7 @@ final class BufferedReaderTest extends TestCase
             );
 
         $buffer = new BufferedReader($reader, bufferSize: 100);
-        self::expectException(InsufficientBuffer::class);
+        self::expectException(UnexpectedEof::class);
         self::expectExceptionMessage(\sprintf('There is not enough data in a buffer of size "%d" to read bytes of size "%d".', 6, 10));
         $buffer->read(10);
     }
