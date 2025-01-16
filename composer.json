@@ -1,6 +1,6 @@
 {
-    "name": "thesis/template",
-    "description": "Thesis Template",
+    "name": "thesis/bytebuffer",
+    "description": "The library implements buffered I/O.",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -9,27 +9,32 @@
             "email": "udaltsov.valentin@gmail.com"
         },
         {
+            "name": "kafkiansky",
+            "email": "vadimzanfir@gmail.com"
+        },
+        {
             "name": "Thesis Team",
             "homepage": "https://github.com/orgs/thesisphp/people"
         }
     ],
     "require": {
-        "php": "^8.3"
+        "php": "^8.3",
+        "thesis/bytereader": "^0.1.0",
+        "thesis/bytewriter": "^0.1.0"
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.8.2",
         "ergebnis/composer-normalize": "^2.45.0",
-        "phpunit/phpunit": "^10.5.40",
-        "symfony/var-dumper": "^6.4.15 || ^7.2.0"
+        "phpunit/phpunit": "^10.5.40"
     },
     "autoload": {
         "psr-4": {
-            "Thesis\\Template\\": "src/"
+            "Thesis\\ByteBuffer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Thesis\\Template\\": "tests/"
+            "Thesis\\ByteBuffer\\": "tests/"
         }
     },
     "config": {
@@ -51,6 +56,15 @@
         }
     },
     "scripts": {
+        "check": [
+            "@composer fixcs -- --dry-run",
+            "@phpstan",
+            "@composer validate",
+            "@composer normalize --dry-run",
+            "@check-require",
+            "@check-unused",
+            "@test"
+        ],
         "check-require": "tools/composer-require-checker/vendor/bin/composer-require-checker",
         "check-unused": "tools/composer-unused/vendor/bin/composer-unused",
         "fixcs": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --diff --verbose",
