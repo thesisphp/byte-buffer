@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Thesis\ByteBuffer;
 
 use Thesis\ByteReader\Reader;
+use Thesis\ByteWriter\Flushable;
 use Thesis\ByteWriter\Writer;
 
 /**

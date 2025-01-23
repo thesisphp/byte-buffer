@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b802406557942bbabc81b3c14d61c26",
+    "content-hash": "ce7be260cecb7622049adee11a60733d",
     "packages": [
         {
             "name": "thesis/byte-reader",
@@ -73,16 +73,16 @@
         },
         {
             "name": "thesis/byte-writer",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thesisphp/byte-writer.git",
-                "reference": "bebd8f9fb15edc1c1b4c064a47c7d00674d16440"
+                "reference": "5f02ce4e3a7e5ce7daeb947cd202fb9420e18a84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thesisphp/byte-writer/zipball/bebd8f9fb15edc1c1b4c064a47c7d00674d16440",
-                "reference": "bebd8f9fb15edc1c1b4c064a47c7d00674d16440",
+                "url": "https://api.github.com/repos/thesisphp/byte-writer/zipball/5f02ce4e3a7e5ce7daeb947cd202fb9420e18a84",
+                "reference": "5f02ce4e3a7e5ce7daeb947cd202fb9420e18a84",
                 "shasum": ""
             },
             "require": {
@@ -126,7 +126,7 @@
             "description": "Writer abstraction for I/O.",
             "support": {
                 "issues": "https://github.com/thesisphp/byte-writer/issues",
-                "source": "https://github.com/thesisphp/byte-writer/tree/0.2.1"
+                "source": "https://github.com/thesisphp/byte-writer/tree/0.2.2"
             },
             "funding": [
                 {
@@ -134,7 +134,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-01-16T15:59:31+00:00"
+            "time": "2025-01-23T12:55:08+00:00"
         }
     ],
     "packages-dev": [
